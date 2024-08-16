@@ -7,29 +7,54 @@ import java.awt.*;
 import java.io.IOException;
 
 public class GuiMain {
-    public JFrame frame = new JFrame("RT Tool Box By y1shin");
+    public JFrame frame = new JFrame("SimpleBox By y1shin");
     public void launch() throws IOException {
 
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setLayout(new GridLayout(3, 1)); // 方框纵向排列
+        frame.setLayout(new GridLayout(6, 1)); // 方框纵向排列
 
-        // 方框1
+        // 综合漏扫工具
         JPanel scanBox = new JPanel(new FlowLayout()); // 按钮横向排列
-        scanBox.setBorder(BorderFactory.createTitledBorder("漏洞扫描"));
-        String scanClassName = "com.CmdRun.GuiScan";
+        scanBox.setBorder(BorderFactory.createTitledBorder("综合漏洞扫描"));
+        String scanClassName = "com.CmdRun.IntegrateTool";
         scanBox.add(new ButtonBuffer().getButton("SpringExploitGui" ,scanClassName ,"SpringExploitGui"));
+
         frame.add(scanBox);
 
-        // 方框2
+        // 信息收集工具
         JPanel collectBox = new JPanel(new FlowLayout()); // 按钮横向排列
         collectBox.setBorder(BorderFactory.createTitledBorder("信息收集"));
-        // 添加按钮
+        String collectClassName = "com.CmdRun.InfoCollect";
+
         frame.add(collectBox);
 
+        // Shell链接工具
         JPanel shellBox = new JPanel(new FlowLayout());
+        shellBox.setBorder(BorderFactory.createTitledBorder("Shell链接工具"));
+        String shellClassName = "com.CmdRun.ShellConn";
 
+        frame.add(shellBox);
 
+        // 框架扫描工具
+        JPanel frameBox = new JPanel(new FlowLayout());
+        frameBox.setBorder(BorderFactory.createTitledBorder("框架扫描工具"));
+        String frameClassName = "com.CmdRun.FrameScan";
 
+        frame.add(frameBox);
+
+        // 数据库工具
+        JPanel dbBox = new JPanel(new FlowLayout());
+        dbBox.setBorder(BorderFactory.createTitledBorder("数据库"));
+        String dbClassName = "com.CmdRun.DbScan";
+
+        frame.add(dbBox);
+
+        // 分析工具
+        JPanel AnalyzeBox = new JPanel(new FlowLayout());
+        AnalyzeBox.setBorder(BorderFactory.createTitledBorder("分析工具"));
+        String AnalyzeClassName = "com.CmdRun.AnalyzeTool";
+
+        frame.add(AnalyzeBox);
 
         frame.setSize(800, 800);
         frame.setVisible(true);
