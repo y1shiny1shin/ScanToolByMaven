@@ -17,8 +17,10 @@ public class GuiMain {
         JPanel scanBox = new JPanel(new FlowLayout()); // 按钮横向排列
         scanBox.setBorder(BorderFactory.createTitledBorder("综合漏洞扫描"));
         String scanClassName = "com.CmdRun.IntegrateTool";
-        scanBox.add(new ButtonBuffer().getButton("SpringExploitGui" ,scanClassName ,"SpringExploitGui"));
-
+        scanBox.add(new ButtonBuffer().getButton("oa综合利用工具" ,scanClassName ,"oaExpTools"));
+        scanBox.add(new ButtonBuffer().getButton("神机综合利用工具" ,scanClassName ,"SJ19"));
+        scanBox.add(new ButtonBuffer().getButton("RuoYi管理系统综合利用" ,scanClassName ,"RuoYiExploit"));
+        scanBox.add(new ButtonBuffer().getButton("Hvv2023",scanClassName ,"HVV2023"));
         frame.add(scanBox);
 
         // 信息收集工具
