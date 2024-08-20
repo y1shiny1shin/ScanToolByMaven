@@ -23,4 +23,17 @@ public class IntegrateTool {
         new ProcExec().ProcExecRun("cd ToolsDir/IntegrateTool/ && java -jar day2023.jar");
     }
 
+    public void IwannaGetAll() throws IOException{
+        new ProcExec().ProcExecRun("cd ToolsDir/IntegrateTool/ && java -jar IWannaGetAll-v1.3.0.jar");
+    }
+    public void LiqunKit() throws IOException{
+        new ProcExec().ProcExecRun("cd ToolsDir/IntegrateTool/LiqunKit_1.6.2/ && java -jar LiqunKit_1.6.2.jar");
+    }
+    public void ThelostWorld_OA() throws IOException{
+        new ProcExec().ProcExecRun("cd ToolsDir/IntegrateTool/ && java -jar Thelostworld_OA.jar");
+    }
+    public void FanWeiOAExp() throws IOException{
+        new ProcExec().ProcExecRun("cd ToolsDir/IntegrateTool/HVVExploitApply/ && java -jar HVVExploitApply.jar");
+    }
+
 }
